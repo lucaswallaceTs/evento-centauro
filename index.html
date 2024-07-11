@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    ffff
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Evento Centauro</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#Inicio">
+          <img src="imagens/logo-desbrava.svg" alt="" />
+        </a>
+        <a href="#Sobre">SOBRE</a>
+        <a href="#Eventos">PROGRAMAÇÃO</a>
+        <a href="#Patrocinio">PERCURSO</a>
+        <a href="#Sobre">KIT</a>
+        <a href="#Eventos">TREINO</a>
+        <a href="#Patrocinio">REGULAMENTO</a>
+        <a href="#Eventos">DÚVIDAS FREQUENTES</a>
+        <a href="#Patrocinio">FAQ</a>
+      </nav>
+    </header>
+    <div class="section-inicio">
+      <div class="filter-inicio"></div>
+      <div class="title-event">
+        <div class="desbrava-mobile">
+          <h2>DESBRAVA</h2>
+        </div>
+        <h1>Campo Grande · MS</h1>
+        <button>INSCREVA-SE</button>
+      </div>
+    </div>
+    <div id="inicio" class="container-accountant">
+      <div class="background-countdown">
+        <img src="imagens/background-countdown.svg" alt="">
+      </div>
+      <div class="accountant">
+        <h4>NOSSO ENCONTRO COMEÇA EM:</h4>
+        <div class="countdown">
+          <div class="style-countdown">
+            <div id="days"></div>
+            <p class="countdown-date">Dias</p>
+          </div>
+          <strong>.</strong>
+          <div class="style-countdown">
+            <div id="hours"></div>
+            <p class="countdown-date">Horas</p>
+          </div>
+          <strong>.</strong>
+          <div class="style-countdown">
+            <div id="minutes"></div>
+            <p class="countdown-date">Minutos</p>
+          </div>
+          <strong>.</strong>
+          <div class="style-countdown">
+            <div id="seconds"></div>
+            <p class="countdown-date">Segundos</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-sobre">
+        <div class="sobre-text">
+          <h1>NÃO É SÓ</h1>
+          <h1>UMA CORRIDA.</h1>
+          <h1>É O NOSSO RITUAL.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in laoreet metus, in volutpat odio. Nam lacus tellus, mollis vitae augue eu, condimentum varius eros. Praesent cursus magna ut risus interdum, et auctor nulla pharetra. Proin a sem arcu gue eu, condimentum va.</p>
+        </div>
+        <div class="image-sobre">
+          <img src="imagens/image-example.png" alt="">
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+      function updateCountdown() {
+      const runningDate = new Date(2024, 8, 8, 10, 0, 0).getTime();
+      const currentDate = new Date();
+      const difference = runningDate - currentDate;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days > 0 ? days : 0;
+      document.getElementById("hours").innerHTML = hours > 0 ? hours : 0;
+      document.getElementById("minutes").innerHTML = minutes > 0 ? minutes : 0;
+      document.getElementById("seconds").innerHTML = seconds > 0 ? seconds : 0;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
+  </body>
 </html>

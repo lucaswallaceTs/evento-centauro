@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+}
+.scrolled{
+    background-color: #000000;
+}
+header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+header nav{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    padding: 22px 0px 22px 0px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    color: #FFF;
+    top: 0;
+    z-index: 10;
+}
+
+header nav a{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 24px;
+}
+nav a img{
+    width: 300px;
+}
+
+.section-inicio{
+    background: url(imagens/background-evento.svg);
+    width: 100%;
+    max-width: 1440px;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-inicio{
+    width: 100%;
+    max-width: 1440px;
+    position: absolute;
+    height: 650px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 49.54%, rgba(0, 0, 0, 0) 100%);
+}
+.title-event{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1;
+    align-items: center;
+}
+.title-event h1{
+    font-size: 56px;
+    color: #FFF;
+}
+.title-event button{
+    width: 240px;
+    height: 64px;
+    padding: 12px 40px 12px 40px;
+    border-radius: 8px;
+    color: #FFF;
+    border: 2px solid #FFFFFF66;
+    background-color: #E30000;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+}
+.title-event .desbrava-mobile{
+    display: none;
+}
+.container-accountant{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    position: relative;
+}
+    .background-countdown{
+        position: absolute;
+        left: 0;
+    }
+    .accountant{
+        width: 30%;
+        text-align: center;
+        margin: 80px 0px 83px 0px;
+    }
+    .accountant h4{
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0px 0px 32px 0px;
+    }
+    .countdown{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+    #days, #hours, #minutes, #seconds{
+        font-size: 56px;
+        font-family: "Montserrat", sans-serif;
+        color: #FFF;
+        font-weight: 600;
+    }
+    .countdown-date{
+        font-size: 20px;
+        font-family: "League Gothic", sans-serif;
+        color: #8C9BA5;
+        margin: 16px 0px;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    .container-sobre{
+        display: flex;
+    }
+    .sobre-text{
+        width: calc(50% - 128px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0px 64px;
+    }
+    .sobre-text h1{
+        color: #FFF;
+        margin: 0;
+    }
+    .sobre-text p{
+        color: #FFF;
+        margin: 24px 0px 0px 0px;
+    }
+    .image-sobre{
+        margin-bottom: 64px;
+    }
+@media (max-width: 768px){
+    header nav{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+    header nav a:first-child{
+        margin-left: 24px;
+    }
+    .title-event h1{
+        font-size: 28px;
+        color: #FFF;
+        margin: 0px 0px 32px 0px;
+    }
+    .title-event .desbrava-mobile{
+        display: flex;        
+        font-size: 28px; 
+    }
+    .title-event .desbrava-mobile h2{     
+        color: transparent;  
+        -webkit-text-stroke: 1.5px #FFF;
+        margin: 0px 0px 16px 0px;
+    }
+    .accountant{
+        width: 100%;
+    }
+    #days, #hours, #minutes, #seconds {
+        font-size: 32px;
+    }
+    .countdown-date{
+        font-size: 12px;
+    }
+}
