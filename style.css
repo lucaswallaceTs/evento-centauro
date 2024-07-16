@@ -146,6 +146,12 @@ nav a img{
         justify-content: center;
         padding: 0px 64px;
     }
+    .info-ritual{
+        display: block;
+    }
+    .info-ritual-mobile{
+        display: none;
+    }
     .sobre-text h1{
         color: #FFF;
         margin: 0;
@@ -235,7 +241,7 @@ nav a img{
         align-items: center;
     }
     .kit-1, .kit-2, .kit-3{
-        padding: 8px 12px;
+        padding: 12px;
         border-radius: 8px;
         font-size: 18px;
         font-weight: 700;
@@ -448,9 +454,6 @@ nav a img{
         color: #FFF;
     }
 @media (max-width: 768px){
-    header{
-        display: none;
-    }
     header nav{
         overflow-x: scroll;
         justify-content: flex-start;
@@ -474,12 +477,19 @@ nav a img{
     }
     .accountant{
         width: 100%;
+        margin: 32px 0px;
+    }
+    .countdown{
+        max-width: 350px;
     }
     #days, #hours, #minutes, #seconds {
         font-size: 32px;
+        margin: 0;
     }
     .countdown-date{
         font-size: 12px;
+        margin: 4px 0px 0px 0px;
+        line-height: 14px;
     }
     .background-countdown{
         display: none;
@@ -499,10 +509,17 @@ nav a img{
         font-size: 16px;
     }
     .container-sobre .image-sobre{
-        width: calc(100% - 40px);
+        width: 100%;
     }
     .container-sobre .image-sobre img{
-        width: calc(100% - 40px);
+        width: 100%;
+        margin: auto;
+    }
+    .info-ritual{
+        display: none;
+    }
+    .info-ritual-mobile{
+        display: flex;
     }
     .container-programacao{
         width: calc(100% - 32px);
@@ -511,14 +528,19 @@ nav a img{
     .container-programacao h1{
         font-size: 24px;
     }
+    
     .container-percurso{
         width: calc(100% - 32px);
         padding: 32px 16px;
         flex-direction: column-reverse;
+    }    
+    .container-percurso .image-mapa {
+        width: 100%;
+        margin-top: 24px;
     }
     .percurso-info{
-        width: calc(100% - 32px);
-        padding: 0px 16px;
+        width: 100%;
+        padding: 0px ;
     }
     .percurso-info h1{
         font-size: 24px;
@@ -526,11 +548,19 @@ nav a img{
     .button-percurso{
         flex-wrap: wrap;
     }
-.container-kit{
-    flex-wrap: wrap;
-    padding: 0;
-}
-
+    .container-kit{
+        flex-wrap: wrap;
+        padding: 0;
+        width: calc(100% - 32px);
+        padding: 32px 16px;
+    }
+    .container-kit .image-mapa{
+        margin-top: 24px;
+        width: 100%;
+    }
+    .button-percurso .kit-2{
+        margin: 16px 0px;
+    }
     .container-etapa{
         padding: 0px 16px;
         width: calc(100% - 32px);
@@ -544,21 +574,76 @@ nav a img{
         font-weight: 300;
         margin: 0px 0px 32px 0px;
     }
+    .container-descontos{
+        width: calc(100% - 32px);
+        padding: 32px 16px;
+    }
     .container-descontos h1{
         width: 100%;
     }
     .descontos{
-        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
     }
     .container-regulamento{
         padding: 0;
+        height: 380px;
     }
-
-
+    .text-regulamento{
+        padding: 32px 16px;
+    }
+    .text-regulamento p{
+        margin: 0;
+    }
+    .text-regulamento div{
+        height: 310px;
+    }
+    .duvidas{
+        height: fit-content;
+    }
+    .image-descontos{
+        display: flex;
+        flex-direction: row;  
+        margin: 0;  
+        max-width: 100%;
+    }
+    .image-descontos .logo-desconto-centauro, .logo-desconto-nike, .logo-desconto-spoint{
+        width: 64px;
+        height: 64px;
+    }
+    .image-descontos img{
+        width: 80%;
+    }
+    .image-descontos .text-descontos{
+        width: 75%;
+    }
+    .regulamento h2 {
+        border-radius: 0;
+        padding: 23px 0px 23px 16px;
+        font-size: 24px;
+    }
+    .text-frequentes{
+        padding: 16px 16px 10px 16px;
+    }
+    .spoint{
+        width: 70% !important;
+    }
     .logo-footer{
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo-footer .nike{
+        margin-top: 40px;
+        max-width: 173px;
     }
     .logo-footer img{
         width: 80%;
+    }
+    .ticket{
+        width: calc(100% - 32px);
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
