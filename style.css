@@ -629,6 +629,9 @@ nav a img{
     .spoint{
         width: 70% !important;
     }
+    footer p{
+        padding: 0px 16px;
+    }
     .logo-footer{
         flex-wrap: wrap;
         justify-content: center;
