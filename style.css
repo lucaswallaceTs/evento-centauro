@@ -8,6 +8,9 @@ body{
     align-items: center;
     font-family: "Rubik", sans-serif;
 }
+button{
+    cursor: pointer;
+}
 .scrolled{
     background-color: #000000;
 }
@@ -40,8 +43,77 @@ nav a img{
     width: 300px;
 }
 
+.hamburger-container {
+    position: fixed;
+    display: none !important;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 16px 16px 0px;
+  }
+  
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 30% auto;
+    padding: 16px 24px 24px 24px;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-content strong{
+    margin-bottom: 13px;
+  }
+  .modal-content a{
+    text-decoration: none;
+    color: #222222;
+    margin: 8px 0px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 21px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .section-inicio{
-    background: url(imagens/background-evento.svg);
+    background: url(https://cdn.ticketsports.com.br/ticketagora/site/Circuito-Desbrava-2024/banner-sao-jose.jpg);
     width: 100%;
     max-width: 1440px;
     background-size: cover;
@@ -178,6 +250,14 @@ nav a img{
     }
     .image-sobre{
         margin-bottom: 64px;
+        width: 616px;
+        height: 616px;
+    }
+    .image-sobre img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
     }
     .container-programacao{
         background-color: #D5D0C2;
@@ -204,6 +284,7 @@ nav a img{
     }
     .image-mapa img{
         width: 100%;
+        border-radius: 16px;
     }
     .percurso-info{
         width: 50%;
@@ -215,6 +296,9 @@ nav a img{
     .button-percurso{
         display: flex;
         margin-top: 24px;
+    }
+    .info-kit{
+        padding: 0px 62px 0px 0px;
     }
     .mapa5k, .mapa10k{
         width: 80px;
@@ -243,7 +327,7 @@ nav a img{
     .kit-1, .kit-2, .kit-3{
         padding: 12px;
         border-radius: 8px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         background-color: #000000;
         color: #FFF;
@@ -251,9 +335,16 @@ nav a img{
         justify-content: center;
         margin-right: 16px;
         cursor: pointer;
+        width: max-content;
     }
     .kit-selected{
         background-color: #E30000;
+    }
+    .image-kit{
+        border: 3px solid #000000;
+        box-shadow: 10px 10px 0px 0px #000000;
+        border-radius: 16px;
+
     }
     .container-descontos{
         background-color: #F3F3F3;
@@ -267,6 +358,7 @@ nav a img{
     }
     .container-descontos h1{
         margin: 0px 0px 40px 0px;
+        font-size: 32px;
         width: 50%;
         text-align: center;
         text-transform: uppercase;
@@ -316,6 +408,12 @@ nav a img{
         justify-content: center;
         margin-bottom: 16px;
     }
+    .text-descontos strong{
+        font-size: 18px;
+    }
+    .text-descontos p{
+        font-size: 16px;
+    }
     .container-etapa{
         width: 100%;
         height: 100%;
@@ -325,7 +423,7 @@ nav a img{
         flex-direction: column;
         align-items: center;
         margin: auto;
-        background: url(imagens/fundo-etapa.svg);
+        background: url(https://cdn.ticketsports.com.br/ticketagora/site/Circuito-Desbrava-2024/fundo-etapa.svg);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -377,6 +475,19 @@ nav a img{
         background-color: #F3F3F3;
         max-height: 484px;
         padding: 40px;
+    }
+    .text-regulamento::-webkit-scrollbar {
+        width: 11px;
+    }
+
+    .text-regulamento::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+    }
+
+    .text-regulamento::-webkit-scrollbar-thumb {
+        background-color: #000;
+        border-radius: 100px;
+        border: 1px solid #f1f1f1;
     }
     .text-frequentes summary{
         list-style: none;
@@ -448,18 +559,38 @@ nav a img{
         align-items: center;
         background-color: #000000;
         width: 100%;
+        font-size: 14px;
+    }
+    .ticket p{
+        font-size: 14px;
     }
     .ticket a{
         text-decoration: underline;
         color: #FFF;
+    
+    }
+    .site-spoint{
+        text-decoration: none;
+        color: #000000;
+    }
+    .link-spoint{
+        text-decoration: underline;
     }
 @media (max-width: 768px){
     header nav{
-        overflow-x: scroll;
-        justify-content: flex-start;
+        display: none;
     }
     header nav a:first-child{
         margin-left: 24px;
+    }
+      .hamburger {
+        display: block;
+    }
+    .hamburger-container{
+        display: flex !important;
+    }
+    .title-event{
+        padding: 0px 16px;
     }
     .title-event h1{
         font-size: 28px;
@@ -510,6 +641,11 @@ nav a img{
     }
     .container-sobre .image-sobre{
         width: 100%;
+        width: 100%;
+        max-width: 328px;
+        height: 328px;
+        display: flex;
+        margin: auto auto 64px auto;
     }
     .container-sobre .image-sobre img{
         width: 100%;
@@ -546,7 +682,7 @@ nav a img{
         font-size: 24px;
     }
     .button-percurso{
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     .container-kit{
         flex-wrap: wrap;
@@ -564,11 +700,12 @@ nav a img{
     .container-etapa{
         padding: 0px 16px;
         width: calc(100% - 32px);
-        background: url(imagens/fundo-etapa-mobile.svg) no-repeat;
+        background: url(https://cdn.ticketsports.com.br/ticketagora/site/Circuito-Desbrava-2024/fundo-etapa-mobile.svg) no-repeat;
         background-size: cover;
     }
     .container-etapa h2{
-        margin: 32px 0px 16px 16px;
+        margin: 32px 0px 16px 0px;        
+        font-size: 24px;
     }
     .container-etapa p{
         font-weight: 300;
@@ -581,6 +718,7 @@ nav a img{
     }
     .container-descontos h1{
         width: 100%;
+        font-size: 18px;
     }
     .descontos{
         flex-direction: column;
@@ -591,13 +729,27 @@ nav a img{
         height: 380px;
     }
     .text-regulamento{
-        padding: 32px 16px;
+        padding: 16px 0px 16px 16px;
     }
     .text-regulamento p{
         margin: 0;
     }
-    .text-regulamento div{
-        height: 310px;
+    .text-regulamento .content{
+        height: 285px;
+        overflow-y: scroll;
+    }
+    .text-regulamento .wrapper-regulamento .content::-webkit-scrollbar {
+        width: 11px;
+    }
+
+    .text-regulamento .wrapper-regulamento .content::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+    }
+
+    .text-regulamento .wrapper-regulamento .content::-webkit-scrollbar-thumb {
+        background-color: #000;
+        border-radius: 100px;
+        border: 1px solid #f1f1f1;
     }
     .duvidas{
         height: fit-content;
@@ -616,7 +768,9 @@ nav a img{
         width: 80%;
     }
     .image-descontos .text-descontos{
+        margin-left: 16px;
         width: 75%;
+        text-align: left;
     }
     .regulamento h2 {
         border-radius: 0;
@@ -649,5 +803,8 @@ nav a img{
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+    .scrolled-mobile{
+        background-color: #000000;
     }
 }
