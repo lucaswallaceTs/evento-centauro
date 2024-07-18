@@ -473,7 +473,6 @@ nav a img{
     .text-frequentes{
         border-radius: 0px 0px 16px 16px;
         background-color: #F3F3F3;
-        max-height: 484px;
         padding: 40px;
     }
     .text-regulamento::-webkit-scrollbar {
@@ -488,6 +487,10 @@ nav a img{
         background-color: #000;
         border-radius: 100px;
         border: 1px solid #f1f1f1;
+    }
+    .text-frequentes details{
+        
+        border-bottom: 1px solid #D9D9D9;
     }
     .text-frequentes summary{
         list-style: none;
