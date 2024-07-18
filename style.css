@@ -546,7 +546,7 @@ nav a img{
     .logo-footer{
         margin: 40px 0px 50px 0px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
         width: 100%;
         max-width: 635px;
         justify-content: space-between;
@@ -578,6 +578,12 @@ nav a img{
     }
     .link-spoint{
         text-decoration: underline;
+    }
+    .text-nike{
+        margin-bottom: -20px;
+    }
+    .nike {
+        width: 200px;
     }
 @media (max-width: 768px){
     header nav{
@@ -793,8 +799,8 @@ nav a img{
         flex-wrap: wrap;
         justify-content: center;
     }
-    .logo-footer .nike{
-        margin-top: 40px;
+    .logo-footer .nike {
+        margin-top: 0px;
         max-width: 173px;
     }
     .logo-footer img{
@@ -809,5 +815,9 @@ nav a img{
     }
     .scrolled-mobile{
         background-color: #000000;
+    }
+    .text-nike{
+        margin: 40px 0px -10px 0px;
+        padding: 0;
     }
 }
